@@ -5,8 +5,11 @@ import Button from './components/button';
 import { ShoppingCart } from 'lucide-react';
 import { Search } from 'lucide-react';
 import{Routes,Route,Link} from 'react-router-dom';
+
 import Home from './pages/Home'
 import Products from './pages/Products';
+import Contact from './pages/Contact';
+import Customize from './pages/Customize';
 
 function App() {
   return (
@@ -39,13 +42,15 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/Products" element={<Products />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Customize" element={<Customize />} />
+        
       </Routes>
 
     </div>
     
   );
 }
-
 export default App;
 
