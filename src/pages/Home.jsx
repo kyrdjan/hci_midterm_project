@@ -12,8 +12,8 @@ function Home() {
                 Every One Love’s <hr className="flex-1 border-t-2 border-black rounded-lg my-3 ml-3" />
             </div>  
 
-            <div id='mid1' className="w-full h-auto select-none">Yummy and</div>  
-            <div id='mid2' className="w-full h-auto text-[#FF6F71] select-none">Tasty Cakes!</div>  
+            <div id='mid1' className="w-full h-auto select-none chalk-shake">Yummy and</div>  
+            <div id='mid2' className="w-full h-auto text-[#FF6F71] select-none chalk-shake">Tasty Cakes!</div>  
 
             <div id='bot' className="text-sm md:text-base w-full pt-3">
                 Order one of our incredible cakes. We have lots of options 

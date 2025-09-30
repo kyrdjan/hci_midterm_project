@@ -36,6 +36,18 @@ body {
   font-size: 50px;
 }
 
+@keyframes chalkShake {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  25%  { transform: translate(-1px, 1px) rotate(-0.4deg); }
+  50%  { transform: translate(1px, -1px) rotate(0.4deg); }
+  75%  { transform: translate(-0.4px, 0.4px) rotate(-0.20deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.chalk-shake {
+  animation: chalkShake 2.5s infinite ease-in-out;
+}
+
 #mid1,
 #mid2 {
   font-family: "Cabin Sketch", sans-serif;
