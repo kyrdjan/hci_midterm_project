@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+/* Inter */
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Cabin Sketch */
+@font-face {
+  font-family: "Cabin Sketch";
+  src: url("./fonts/CabinSketch-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Single Day */
+@font-face {
+  font-family: "Single Day";
+  src: url("./fonts/Single_Day/SingleDay-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Default body font */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Custom IDs */
+#top {
+  font-weight: 300;
+  font-family: "Single Day", cursive;
+  font-size: 50px;
+}
+
+#mid1,
+#mid2 {
+  font-family: "Cabin Sketch", sans-serif;
+  font-size: 100px;
+  letter-spacing: 7px;
+}
+
+#bot {
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  font-size: large;
+  word-spacing: 1px;
+}
