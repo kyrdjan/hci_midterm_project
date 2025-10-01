@@ -6,7 +6,7 @@ export default function ReviewCard({ image, rating, count }) {
   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
   return (
-    <div className="flex bg-white p-3 shadow-[-12px_12px_0px_#F7C4C4] relative inline-block w-80 h-90">
+    <div className="flex bg-white p-3 shadow-[-12px_12px_0px_#F7C4C4] relative inline-block w-80 h-90 hover:scale-105 transition-transform duration-300 rounded-2xl">
       {/* Image */}
       <div className="w-full h-70 flex items-center justify-center overflow-hidden pt-3">
         <img src={image} alt="Product" className="object-cover w-70 h-70" />

@@ -5,7 +5,7 @@ import right_pic from '../assets/chococake.svg'
 
 function Products() {
   return (
-    <div className = "flex flex-col items-center justify-center w-full  h-100vh bg-[#FFE3E5]">
+    <div className = "flex flex-col items-center justify-center w-full  h-100vh bg-[#FFE3E5] bg-transparent">
         <div className="flex flex-row items-center justify-center w-full px-30">
             <hr className="flex-1 border-t-3 border-black rounded-lg my-3 mr-3" />
             <h1 className="text-6xl font-bold text-[#E74A4A] text-shadow-[-2px_2px_0px_#F7C4C4]">
