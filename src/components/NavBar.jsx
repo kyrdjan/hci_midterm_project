@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Search, ShoppingCart } from "lucide-react";
+import { MessageCircle, ShoppingCart } from "lucide-react";
 import Button from "./button";
 import logo from "../assets/logo.svg";
 import CartDialog from "./Cart";
 
 function Navbar() {
-    const [searchOpen, setSearchOpen] = useState(false);
-    const [query, setQuery] = useState("");
     const [isCartOpen, setCartOpen] = useState(false);
 
     return (
@@ -28,45 +26,27 @@ function Navbar() {
                 <Link to="/products"><Button variant="ghost">Products</Button></Link>
                 <Link to="/contact"><Button variant="ghost">Contact</Button></Link>
 
-                {/* Search */}
-                <div className="flex items-center gap-4 mt-2 md:mt-0">
-                <div
-                    className={`flex items-center rounded px-2 overflow-hidden transition-all duration-500 ease-in-out ${
-                        searchOpen ? "border border-[#490101]" : "border border-transparent"
-                    }`}
-                    style={{ width: searchOpen ? "200px" : "40px" }}
-                    >
-
+                <div>
                     <button
-                        onClick={() => setSearchOpen(!searchOpen)}
-                        className="p-1 text-[#490101] hover:scale-110 transition-transform duration-300 ease-in-out"
+                        onClick={() => console.log("Message clicked")} 
+                        className="p-1 hover:scale-110 transition-transform duration-300 ease-in-out"
                     >
-                        <Search className="w-6 h-6" />
+                        <MessageCircle className="w-6 h-6 text-[#490101]" />
                     </button>
 
-        
-                    <input
-                        type="text"
-                        value={query}
-                        onChange={(e) => setQuery(e.target.value)}
-                        placeholder="Search..."
-                        className={`ml-2 bg-transparent outline-none text-[#490101] transition-opacity duration-300 ${
-                        searchOpen ? "opacity-100" : "opacity-0 w-0"
-                        }`}
-                    />
-                </div>
-                <button
-                    onClick={() => setCartOpen(!isCartOpen)}
-                    className="p-1 hover:scale-110 transition-transform duration-300 ease-in-out"
-                >
-                    <ShoppingCart className="w-6 h-6 text-[#490101]" />
-                </button>
+                    <button
+                        onClick={() => setCartOpen(!isCartOpen)}
+                        className="p-1 hover:scale-110 transition-transform duration-300 ease-in-out"
+                    >
+                        <ShoppingCart className="w-6 h-6 text-[#490101]" />
+                    </button>
 
-                {/* Non-modal dialog */}
-                <CartDialog isOpen={isCartOpen} onClose={() => setCartOpen(false)} />
+                    {/* Non-modal dialog */}
+                    <CartDialog isOpen={isCartOpen} onClose={() => setCartOpen(false)} />
                 </div>
             </div>
         </div>
+        
     );
     }
 
