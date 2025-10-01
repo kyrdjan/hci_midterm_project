@@ -4,9 +4,11 @@ import { MessageCircle, ShoppingCart } from "lucide-react";
 import Button from "./button";
 import logo from "../assets/logo.svg";
 import CartDialog from "./Cart";
+import MessageDialog from "./MessageDialog";
 
 function Navbar() {
     const [isCartOpen, setCartOpen] = useState(false);
+    const [isMessageOpen, setMessageOpen] = useState(false);
 
     return (
         <div className="flex flex-wrap h-auto md:h-[20vh] justify-between items-center md:px-[2vw] py-4">
@@ -28,7 +30,7 @@ function Navbar() {
 
                 <div>
                     <button
-                        onClick={() => console.log("Message clicked")} 
+                        onClick={() => setMessageOpen(!isMessageOpen)} 
                         className="p-1 hover:scale-110 transition-transform duration-300 ease-in-out"
                     >
                         <MessageCircle className="w-6 h-6 text-[#490101]" />
@@ -41,8 +43,9 @@ function Navbar() {
                         <ShoppingCart className="w-6 h-6 text-[#490101]" />
                     </button>
 
-                    {/* Non-modal dialog */}
+                    
                     <CartDialog isOpen={isCartOpen} onClose={() => setCartOpen(false)} />
+                    <MessageDialog isOpen={isMessageOpen} onClose={() => setMessageOpen(false)} />
                 </div>
             </div>
         </div>
