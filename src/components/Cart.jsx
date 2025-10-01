@@ -18,7 +18,7 @@ function CartDialog({ isOpen, onClose }) {
             <p className="text-gray-500">Your cart is empty.</p>
             </div>
         </div>
-
+        {/* backend functionality to be added */}
         <div className="flex justify-end">
             <Button variant="solid" className="mb-2">Checkout</Button>
         </div>
