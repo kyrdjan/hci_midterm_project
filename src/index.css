@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 /* Inter */
 @font-face {
   font-family: "Inter";
@@ -30,10 +31,9 @@ body {
 }
 
 /* Custom IDs */
-#top {
+#top, h1, #cardtext {
   font-weight: 300;
   font-family: "Single Day", cursive;
-  font-size: 50px;
 }
 
 @keyframes chalkShake {
