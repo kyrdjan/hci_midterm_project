@@ -21,3 +21,4 @@ pnpm install lucide-react
 npm install @fontsource/inter
 npm install -D tailwindcss postcss autoprefixer
 npm install @heroicons/react
+npm install react-icons

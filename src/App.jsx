@@ -14,14 +14,18 @@ function App() {
 
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#FFE3E5]">
-      <Navbar />
-      
+      {/* Sticky Navbar */}
+      <div className="sticky top-0 z-50 bg-transparent">
+        <Navbar />
+      </div>
+
+      {/* Animated Page Transitions */}
       <AnimatePresence mode="wait">
         <motion.div
           key={location.pathname}
-          initial={{opacity:0}}
-          animate={{opacity:1}}
-          transition={{duration:1}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
           className="flex-1"
         >
           <Routes>
@@ -33,11 +37,9 @@ function App() {
           </Routes>
         </motion.div>
       </AnimatePresence>
-
-
     </div>
-    
   );
 }
+
 export default App;
 
