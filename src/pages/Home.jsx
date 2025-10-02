@@ -3,7 +3,7 @@ import Button from '../components/button'
 
 function Home() {
     return (
-        <div className="flex flex-col-reverse md:flex-row h-auto md:h-[80vh] w-full justify-around items-center px-4">
+        <div className="flex flex-col-reverse md:flex-row h-auto md:h-[100vh] w-full justify-around items-center pt-30 px-4">
         
         {/* Text Section */}
         <div className="flex flex-col items-start justify-center w-full md:w-1/2 h-full text-black text-2xl md:text-4xl font-bold pb-6 md:pb-10 pr-0 md:pr-10 pl-0 md:pl-10">
@@ -12,8 +12,8 @@ function Home() {
                 Every One Love’s <hr className="flex-1 border-t-2 border-black rounded-lg my-3 ml-3" />
             </div>  
 
-            <div id='mid1' className="w-full h-auto select-none chalk-shake">Yummy and</div>  
-            <div id='mid2' className="w-full h-auto text-[#FF6F71] select-none chalk-shake">Tasty Cakes!</div>  
+            <div id='mid1' className="w-full h-auto select-none chalk-shake1">Yummy and</div>  
+            <div id='mid2' className="w-full h-auto text-[#FF6F71] select-none chalk-shake2">Tasty Cakes!</div>  
 
             <div id='bot' className="text-sm md:text-base w-full pt-3">
                 Order one of our incredible cakes. We have lots of options 
@@ -32,7 +32,7 @@ function Home() {
             <img 
             src={MainPicture} 
             alt="Main" 
-            className="w-[70vw] md:w-[35vw] h-auto object-contain" 
+            className="w-[70vw] md:w-[35vw] h-auto object-contain "  
             />
         </div>
         </div>

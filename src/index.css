@@ -44,9 +44,15 @@ body {
   100% { transform: translate(0, 0) rotate(0deg); }
 }
 
-.chalk-shake {
+.chalk-shake1 {
   animation: chalkShake 2.5s infinite ease-in-out;
 }
+
+.chalk-shake2 {
+  animation: chalkShake 2.5s infinite ease-in-out;
+   animation-delay: 0.5s;
+}
+
 
 #mid1,
 #mid2 {

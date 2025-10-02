@@ -11,24 +11,26 @@ function Navbar() {
     const [isMessageOpen, setMessageOpen] = useState(false);
 
     return (
-        <div className="flex flex-wrap h-auto md:h-[20vh] justify-between items-center md:px-[2vw] py-4">
+        <div className="fixed top-0 left-0 w-full z-50 flex flex-wrap h-auto md:h-[20vh] justify-between items-center md:px-[2vw] py-4">
     
-            <div className="w-full pl-5 md:w-auto flex justify-center md:justify-start pt-[20px]">
+            {/* Logo */}
+            <div className="w-full pl-5 md:w-auto flex justify-center md:justify-start pt-[10px]">
                 <img 
-                src={logo} 
-                alt="Logo" 
-                className="max-w-[120px] md:max-w-[180px] lg:max-w-[250px] object-contain" 
+                    src={logo} 
+                    alt="Logo" 
+                    className="max-w-[120px] md:max-w-[180px] lg:max-w-[250px] object-contain" 
                 />
             </div>
 
-        
+            {/* Navigation Links */}
             <div className="flex flex-wrap gap-4 pr-5 md:gap-[5vw] w-full md:w-auto justify-center md:justify-end mt-4 md:mt-0">
                 <Link to="/"><Button variant="ghost">Home</Button></Link>
                 <Link to="/customize"><Button variant="ghost">Customize</Button></Link>
                 <Link to="/products"><Button variant="ghost">Products</Button></Link>
                 <Link to="/contact"><Button variant="ghost">Contact</Button></Link>
 
-                <div>
+                {/* Icons */}
+                <div className="flex gap-3">
                     <button
                         onClick={() => setMessageOpen(!isMessageOpen)} 
                         className="p-1 hover:scale-110 transition-transform duration-300 ease-in-out"
@@ -42,15 +44,15 @@ function Navbar() {
                     >
                         <ShoppingCart className="w-6 h-6 text-[#490101]" />
                     </button>
-
-                    
-                    <CartDialog isOpen={isCartOpen} onClose={() => setCartOpen(false)} />
-                    <MessageDialog isOpen={isMessageOpen} onClose={() => setMessageOpen(false)} />
                 </div>
             </div>
+
+            {/* Modals */}
+            <CartDialog isOpen={isCartOpen} onClose={() => setCartOpen(false)} />
+            <MessageDialog isOpen={isMessageOpen} onClose={() => setMessageOpen(false)} />
         </div>
-        
     );
-    }
+}
+
 
 export default Navbar;
