@@ -1,5 +1,5 @@
 import MainPicture from '../assets/main_pic.svg'
-import Button from '../components/button'
+import Button from '../src/components/button.jsx'
 
 function Home() {
     return (
