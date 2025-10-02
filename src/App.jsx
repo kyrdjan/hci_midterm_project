@@ -13,7 +13,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="bg-doodle flex flex-col w-full min-h-screen bg-[#FFE3E5]">
+    <div className="flex flex-col w-full min-h-screen bg-[#FFE3E5]">
       <Navbar />
       
       <AnimatePresence mode="wait">
