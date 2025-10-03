@@ -17,8 +17,8 @@ function Products() {
     return (
     <div className="h-auto w-full flex flex-col items-center justify-center">
 
-        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh] mb-[50px]" value={0.6}>
-            <div className = "flex flex-col items-center justify-center w-full h-[100vh] mb-[50px]">
+        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.6}>
+            <div className = "flex flex-col items-center justify-center w-full h-[100vh] pt-20">
                 <div className="flex flex-row items-center justify-center w-full px-30">
                     <hr className="flex-1 border-t-3 border-black rounded-lg my-3 mr-3" />
                     <h1 className="text-6xl font-bold text-[#E74A4A] text-shadow-[-2px_2px_0px_#F7C4C4]">
@@ -27,21 +27,44 @@ function Products() {
                     <hr className="flex-1 border-t-3 border-black rounded-lg my-3 ml-3" />
                 </div>
                 <div className="flex flex-wrap justify-center gap-20 mt-10 w-full h-auto px-5 ">
-                    <ReviewCard 
-                    image= {left_pic}
-                    rating={4.5} 
-                    count={42} 
-                    />
-                    <ReviewCard 
-                    image= {mid_pic}
-                    rating={4.5} 
-                    count={52} 
-                    />
-                    <ReviewCard 
-                    image= {right_pic}
-                    rating={4} 
-                    count={32} 
-                    />
+                    <div className="flex flex-col gap-5">
+                        <ReviewCard 
+                        image= {left_pic}
+                        rating={4.5} 
+                        count={42} 
+                        />
+                        <div className='flex flex-row w-full alignment-center justify-center'>
+                            <div id='bot'> Chocolate Banana Loaf </div> 
+                            <div className='px-4'> - </div>
+                            <div id='addtocartfont' className='text-lg'> ₱ 160</div>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col gap-5">
+                        <ReviewCard 
+                        image= {mid_pic}
+                        rating={4.5} 
+                        count={52} 
+                        />
+                        <div className='flex flex-row w-full alignment-center justify-center'>
+                            <div id='bot'> Cassava Cake </div> 
+                            <div className='px-4'> - </div>
+                            <div id='addtocartfont' className='text-lg'> ₱ 175</div>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col gap-5">
+                        <ReviewCard 
+                        image= {right_pic}
+                        rating={4} 
+                        count={32} 
+                        />
+                        <div className='flex flex-row w-full alignment-center justify-center'>
+                            <div id='bot'> Moist Cake in a Tub </div> 
+                            <div className='px-4'> - </div>
+                            <div id='addtocartfont' className='text-lg'> ₱ 185</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </FadeInSection>
@@ -142,7 +165,8 @@ function Products() {
                         <ReviewCard 
                         image= {left_pic}
                         rating={4.5} 
-                        count={42} 
+                        count={42}
+                        borderDesign={'border-2 border-[#FF8315]'}
                         />
                     }
                 />
@@ -164,6 +188,7 @@ function Products() {
                         image= {left_pic}
                         rating={4.5} 
                         count={42} 
+                        borderDesign={'border-2 border-[#FF8315]'}
                         />
                     }
                 />
@@ -185,6 +210,7 @@ function Products() {
                         image= {left_pic}
                         rating={4.5} 
                         count={42} 
+                        borderDesign={'border-2 border-[#FF8315]'}
                         />
                     }
                 />
@@ -206,6 +232,7 @@ function Products() {
                         image= {left_pic}
                         rating={4.5} 
                         count={42} 
+                        borderDesign={'border-2 border-[#FF8315]'}
                         />
                     }
                 />

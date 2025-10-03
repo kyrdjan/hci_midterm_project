@@ -20,7 +20,7 @@ const ProductCard = ({
       <div className=" w-1/2 flex flex-wrap alignment-center justify-start h-auto"> 
       
         <div className="flex flex-rows w-full h-auto alignment-center justify-between">
-          <div id='special' className="text-5xl text-[#E74A4A] ">
+          <div id='special' className="text-5xl text-[#E74A4A]  text-shadow-[-2px_2px_0px_white]">
               {title}
           </div>
           <div className="text-5xl flex flex-rows w-auto h-auto">
@@ -43,7 +43,7 @@ const ProductCard = ({
           {tags.map((tag, idx) => (
             <span
             key={idx}
-            className="px-5 py-2 border-1 border-[#FF8315] rounded-lg text-sm text-bold"
+            className="px-5 py-2 border-1 border-[#FF8315]  bg-white rounded-lg text-sm text-bold"
             >
             {tag}
             </span>
