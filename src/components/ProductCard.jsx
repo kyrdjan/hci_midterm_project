@@ -1,4 +1,7 @@
 // src/components/ProductCard.jsx
+import Button from "./button";
+
+
 const ProductCard = ({
   title = "Banana Loaf",
   price = "250.00",
@@ -11,43 +14,46 @@ const ProductCard = ({
   rightComponent = null,
 }) => {
   return (
-    <div className="h-[100vh] w-full flex flex-col md:flex-row items-center justify-center bg-[#FFE3E5] px-10 py-10 gap-10">
+    <div className="h-[100vh] w-full flex flex-col md:flex-row items-center justify-center bg-[#FFE3E5] px-20 py-20 gap-20">
       
       {/* LEFT SECTION */}
-      <div className="flex flex-col max-w-xl text-[#490101]">
-        {/* Title & Price */}
-        <div className="flex items-center gap-4 mb-4">
-          <h2 className="text-5xl font-bold text-[#E74A4A]">{title}</h2>
-          <p className="text-2xl font-semibold text-black">₱ {price}</p>
+      <div className=" w-1/2 flex flex-wrap alignment-center justify-start h-auto"> 
+      
+        <div className="flex flex-rows w-full h-auto alignment-center justify-between">
+          <div id='special' className="text-5xl text-[#E74A4A] ">
+              {title}
+          </div>
+          <div className="text-5xl flex flex-rows w-auto h-auto">
+            <div className="pr-1">₱</div>
+            <div id='price'>
+                {price}
+            </div>
+          </div>
+        </div>
+        
+        <div id='bot' className="text-lg justify-center alignment-center w-full h-auto pb-4 pt-3 text-justify ">
+          {description}
         </div>
 
-        {/* Description paragraphs */}
-        <div className="mb-6 space-y-3">
-          {description.map((para, idx) => (
-            <p key={idx} className="text-gray-800 leading-relaxed">
-              {para}
-            </p>
-          ))}
+        <div className="w-3/4" >
+          <hr className="flex-1 border-t-3 border-black rounded-lg" />
         </div>
-
-        <hr className="border-t-2 border-black w-1/3 mb-6" />
-
-        {/* Tags */}
-        <div className="flex flex-wrap gap-3 mb-6">
+    
+        <div className="flex flex-wrap alignment-center justify-start gap-2 py-5 w-full">
           {tags.map((tag, idx) => (
             <span
-              key={idx}
-              className="px-3 py-1 border border-[#E74A4A] rounded-full text-sm text-gray-700"
+            key={idx}
+            className="px-5 py-2 border-1 border-[#FF8315] rounded-lg text-sm text-bold"
             >
-              {tag}
+            {tag}
             </span>
           ))}
         </div>
-
-        {/* Button */}
-        <button className="bg-[#E74A4A] text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-[#c93d3d] transition">
-          ADD TO CART!
-        </button>
+        
+        <div className="w-full">
+          <Button variant='solid'>ADD TO CART!</Button>
+        </div>    
+        
       </div>
 
       {/* RIGHT SIDE (Dynamic) */}

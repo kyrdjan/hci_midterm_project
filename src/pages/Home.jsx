@@ -15,7 +15,7 @@ function Home() {
             <div id='mid1' className="w-full h-auto select-none chalk-shake1">Yummy and</div>  
             <div id='mid2' className="w-full h-auto text-[#FF6F71] select-none chalk-shake2">Tasty Cakes!</div>  
 
-            <div id='bot' className="text-sm md:text-base w-full pt-3">
+            <div id='bot' className="text-lg md:text-base w-full pt-3">
                 Order one of our incredible cakes. We have lots of options 
                 for you to choose from. You can also work with us to make 
                 your very own custom cake!

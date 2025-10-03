@@ -1,12 +1,12 @@
 import { StarIcon as SolidStar } from "@heroicons/react/24/solid";
 
-export default function ReviewCard({ image, rating, count }) {
+export default function ReviewCard({ image, rating, count, borderDesign }) {
   const fullStars = Math.floor(rating);
   const halfStar = rating % 1 >= 0.5;
   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
   return (
-    <div className="flex bg-white p-3 shadow-[-12px_12px_0px_#F7C4C4] relative inline-block w-80 h-90">
+    <div className={`flex bg-white p-3 shadow-[-12px_12px_0px_#F7C4C4] relative inline-block w-80 h-90 ${borderDesign}`}>
       {/* Image */}
       <div className="w-full h-70 flex items-center justify-center overflow-hidden pt-3">
         <img src={image} alt="Product" className="object-cover w-70 h-70" />

@@ -9,6 +9,7 @@ import MessageDialog from "./MessageDialog";
 function Navbar() {
     const [isCartOpen, setCartOpen] = useState(false);
     const [isMessageOpen, setMessageOpen] = useState(false);
+    const [activeButton, setActiveButton] = useState("home"); // track last clicked nav button
 
     return (
         <div className="fixed top-0 left-0 w-full z-50 flex flex-wrap h-auto md:h-[20vh] justify-between items-center md:px-[2vw] py-4">
@@ -24,10 +25,38 @@ function Navbar() {
 
             {/* Navigation Links */}
             <div className="flex flex-wrap gap-4 pr-5 md:gap-[5vw] w-full md:w-auto justify-center md:justify-end mt-4 md:mt-0">
-                <Link to="/"><Button variant="ghost">Home</Button></Link>
-                <Link to="/customize"><Button variant="ghost">Customize</Button></Link>
-                <Link to="/products"><Button variant="ghost">Products</Button></Link>
-                <Link to="/contact"><Button variant="ghost">Contact</Button></Link>
+                <Link to="/">
+                    <Button 
+                        variant={activeButton === "home" ? "red_nav" : "ghost"} 
+                        onClick={() => setActiveButton("home")}
+                    >
+                        Home
+                    </Button>
+                </Link>
+                <Link to="/customize">
+                    <Button 
+                        variant={activeButton === "customize" ? "red_nav" : "ghost"} 
+                        onClick={() => setActiveButton("customize")}
+                    >
+                        Customize
+                    </Button>
+                </Link>
+                <Link to="/products">
+                    <Button 
+                        variant={activeButton === "products" ? "red_nav" : "ghost"} 
+                        onClick={() => setActiveButton("products")}
+                    >
+                        Products
+                    </Button>
+                </Link>
+                <Link to="/contact">
+                    <Button 
+                        variant={activeButton === "contact" ? "red_nav" : "ghost"} 
+                        onClick={() => setActiveButton("contact")}
+                    >
+                        Contact
+                    </Button>
+                </Link>
 
                 {/* Icons */}
                 <div className="flex gap-3">
@@ -53,6 +82,5 @@ function Navbar() {
         </div>
     );
 }
-
 
 export default Navbar;
