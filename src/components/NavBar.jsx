@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { MessageCircle, ShoppingCart } from "lucide-react";
 import Button from "./button";
 import logo from "../assets/logo.svg";
@@ -7,12 +7,29 @@ import CartDialog from "./Cart";
 import MessageDialog from "./MessageDialog";
 
 function Navbar() {
+
+    const location = useLocation(); // current URL path
+
+    // Hide navbar entirely on /checkout
+    if (location.pathname === "/checkout") {
+        return null;
+    }
+    // Map pathname to active button key
+    const pathnameToButton = {
+    "/": "home",
+    "/customize": "customize",
+    "/products": "products",
+    "/contact": "contact",
+    };
+
+
     const [isCartOpen, setCartOpen] = useState(false);
     const [isMessageOpen, setMessageOpen] = useState(false);
-    const [activeButton, setActiveButton] = useState("home"); // track last clicked nav button
+
+    const activeButton = pathnameToButton[location.pathname] || "home";
 
     return (
-        <div className="fixed top-0 left-0 w-full z-50 flex flex-wrap h-auto md:h-[20vh] justify-between items-center md:px-[2vw] py-4">
+        <div className="fixed top-0 left-0 w-full z-50 flex flex-wrap h-auto md:h-[20vh] justify-between items-center md:px-[2vw] py-4 bg-blur-xs">
     
             {/* Logo */}
             <div className="w-full pl-5 md:w-auto flex justify-center md:justify-start pt-[10px]">
@@ -26,36 +43,19 @@ function Navbar() {
             {/* Navigation Links */}
             <div className={`flex flex-wrap gap-4 pr-5 md:gap-[5vw] w-full md:w-auto justify-center md:justify-start mt-4 md:mt-0 ${activeButton === "products" ? "-mr-[15px]" : ""}`}>
                 <Link to="/">
-                    <Button 
-                        variant={activeButton === "home" ? "red_nav" : "ghost"} 
-                        onClick={() => setActiveButton("home")}
-                    >
-                        Home
-                    </Button>
+                <Button variant={activeButton === "home" ? "red_nav" : "ghost"}>Home</Button>
                 </Link>
+
                 <Link to="/customize">
-                    <Button 
-                        variant={activeButton === "customize" ? "red_nav" : "ghost"} 
-                        onClick={() => setActiveButton("customize")}
-                    >
-                        Customize
-                    </Button>
+                <Button variant={activeButton === "customize" ? "red_nav" : "ghost"}>Customize</Button>
                 </Link>
+
                 <Link to="/products">
-                    <Button 
-                        variant={activeButton === "products" ? "red_nav" : "ghost"} 
-                        onClick={() => setActiveButton("products")}
-                    >
-                        Products
-                    </Button>
+                <Button variant={activeButton === "products" ? "red_nav" : "ghost"}>Products</Button>
                 </Link>
+
                 <Link to="/contact">
-                    <Button 
-                        variant={activeButton === "contact" ? "red_nav" : "ghost"} 
-                        onClick={() => setActiveButton("contact")}
-                    >
-                        Contact
-                    </Button>
+                <Button variant={activeButton === "contact" ? "red_nav" : "ghost"}>Contact</Button>
                 </Link>
 
                 {/* Icons */}

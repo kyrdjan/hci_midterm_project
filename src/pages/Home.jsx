@@ -1,7 +1,12 @@
 import MainPicture from '../assets/main_pic.svg'
 import Button from '../components/button'
 
+import { useNavigate } from "react-router-dom";
+
 function Home() {
+
+    const navigate = useNavigate();
+
     return (
         <div className="flex flex-col-reverse md:flex-row h-auto md:h-[100vh] w-full justify-around items-center pt-30 px-4">
         
@@ -22,8 +27,8 @@ function Home() {
                 </div>
 
                 <div className='flex items-center justify-start pt-8 md:pt-10 flex-wrap'>
-                <Button variant='red' className='mt-[2vh]'>ORDER NOW!</Button>
-                <Button variant='outline' className='mt-[2vh] md:ml-[2vw]'>EXPLORE MORE</Button>
+                <Button variant='red' className='mt-[2vh]' onClick={() => navigate("/customize")} >ORDER NOW!</Button>
+                <Button variant='outline' className='mt-[2vh] md:ml-[2vw]' onClick={() => navigate("/products")}>EXPLORE MORE</Button>
                 </div>
             </div>
 

@@ -25,7 +25,7 @@ function CartItem({ image, name, price }) {
         </h2>
 
         {/* Quantity controls */}
-        <div className="flex items-center gap-2 text-sm">
+        <div className="flex items-center gap-2  text-sm">
           <h2
             id="addtocartfont"
             className="text-xl text-[#FF8315]"
@@ -33,23 +33,25 @@ function CartItem({ image, name, price }) {
             ₱ {totalPrice.toFixed(2)}
           </h2>
 
-          <button
-            onClick={() => setQuantity(q => Math.max(1, q - 1))}
-            className="w-8 h-8 flex items-center justify-center border border-black rounded hover:bg-gray-200"
-          >
-            −
-          </button>
+          <div className="border border-black rounded-xl flex items-center justify-center">
+            <button
+              onClick={() => setQuantity(q => Math.max(1, q - 1))}
+              className="w-8 h-8 flex items-center justify-center"
+              >
+              −
+            </button>
 
-          <span className="w-6 text-center">
-            {quantity}
-          </span>
+            <span className="w-6 text-center">
+              {quantity}
+            </span>
 
-          <button
-            onClick={() => setQuantity(q => q + 1)}
-            className="w-8 h-8 flex items-center justify-center border border-black rounded hover:bg-gray-200"
-          >
-            +
-          </button>
+            <button
+              onClick={() => setQuantity(q => q + 1)}
+              className="w-8 h-8 flex items-center justify-center"
+              >
+              +
+            </button>
+          </div>
         </div>
       </div>
 

@@ -35,20 +35,20 @@ function Products() {
                         <ReviewCard 
                         image= {left_pic}
                         rating={4.5} 
-                        count={42} 
+                        count={72} 
                         />
                         <div className='flex flex-row w-full alignment-center justify-center pt-[20px]'>
                             <div id='bot'> Chocolate Banana Loaf </div> 
                             <div className='px-4'> - </div>
-                            <div id='addtocartfont' className='text-lg'> ₱ 160</div>
+                            <div id='addtocartfont' className='text-lg'> ₱ 210</div>
                         </div>
                     </div>
 
                     <div className="flex flex-col gap-5">
                         <ReviewCard 
                         image= {mid_pic}
-                        rating={4.5} 
-                        count={52} 
+                        rating={4} 
+                        count={85} 
                         />
                         <div className='flex flex-row w-full alignment-center justify-center pt-[20px]'>
                             <div id='bot'> Cassava Cake </div> 
@@ -60,8 +60,8 @@ function Products() {
                     <div className="flex flex-col gap-5">
                         <ReviewCard 
                         image= {right_pic}
-                        rating={4} 
-                        count={32} 
+                        rating={4.5} 
+                        count={91} 
                         />
                         <div className='flex flex-row w-full alignment-center justify-center pt-[20px]'>
                             <div id='bot'> Moist Cake in a Tub </div> 
@@ -106,7 +106,7 @@ function Products() {
                     <div className=" w-1/2 flex flex-wrap alignment-center justify-start h-auto"> 
                     
                         <div className="flex flex-rows w-full h-auto alignment-center justify-between">
-                                <div id='special' className="text-5xl text-[#E74A4A] ">
+                                <div id='special' className="text-5xl text-[#E74A4A]  text-shadow-[-2px_2px_0px_#FFE3E5]">
                                     Creamcheese Garlic Bread
                                 </div>
                                 <div className="text-5xl flex flex-rows w-auto h-auto">
@@ -141,8 +141,8 @@ function Products() {
                     <div className="text-4xl w-1/3 flex flex-wrap alignment-center justify-center h-auto "> 
                             <ReviewCard 
                             image= {creamcheese}
-                            rating={4} 
-                            count={32}
+                            rating={4.5} 
+                            count={16}
                             borderDesign={'border-2 border-[#FF8315]'}
                             />
                     </div>
@@ -163,16 +163,27 @@ function Products() {
                     title="Chocolate Brownies"
                     price="180.00"
                     description={[
-                        "Rich, fudgy, and loaded with chunks of premium dark chocolate.",
+                        "Rich, fudgy, and loaded with chunks of premium dark chocolate. ",
                         "Perfect for chocolate lovers who want an indulgent treat!",
                     ]}
-                    tags={["Super Fudgy 🍫", "Kids love it!", "Addicting 😍"]}
+                    tags={[
+                    "Super tasty! 😋",
+                    "Lami kaayo! 🍰",                
+                    "Kids love it!",  
+                    "Huy, daghan gyud mo paliton!",    
+                    "Addicting 😍",
+                    "Perfect for birthdays",
+                    "Kalami sa tanang panahon",        
+                    "Sweet tooth approved! 🍫",
+                    "Barkada favorite! 👯‍♂️",         
+                    "Masarap gyud!"                    
+                    ]}
                     rightComponent={
                         <ReviewCard 
                         image= {img1}
                         rating={4.5} 
                         count={42}
-                        borderDesign={'border-2 border-[#FF8315]'}
+                        borderDesign={''}
                         />
                     }
                 />
@@ -185,16 +196,25 @@ function Products() {
                     title="Revel Bars"
                     price="180.00"
                     description={[
-                        "Rich, fudgy, and loaded with chunks of premium dark chocolate.",
-                        "Perfect for chocolate lovers who want an indulgent treat!",
+                        "Indulge in our rich and chewy Revel Bars, a perfect blend of premium chocolate chunks, nuts, and a hint of caramel. ",
+                        "Chewy, chocolatey, and nutty goodness in every bite! 🍫✨ Perfect for snacktime or sharing.",
                     ]}
-                    tags={["Super Fudgy 🍫", "Kids love it!", "Addicting 😍"]}
+                    tags={[
+                    "Chocolate heaven 🍫",
+                    "Kalami sa tibuok pamilya",    
+                    "Freshly baked today",
+                    "Pa try gyud 😍",               
+                    "Sweet surprise",
+                    "Soft & Fluffy",
+                    "Lami kaayo kaonon!",          
+                    "Weekend treat 🍩"
+                    ]}
                     rightComponent={
                         <ReviewCard 
                         image= {img2}
                         rating={4.5} 
                         count={27} 
-                        borderDesign={'border-2 border-[#FF8315]'}
+                        borderDesign={''}
                         />
                     }
                 />
@@ -207,16 +227,25 @@ function Products() {
                     title="Yema Tart"
                     price="180.00"
                     description={[
-                        "Rich, fudgy, and loaded with chunks of premium dark chocolate.",
-                        "Perfect for chocolate lovers who want an indulgent treat!",
+                        "Sweet, creamy, and custardy, with a delightful caramel flavor in every bite! ",
+                        "Perfect for sweet lovers❤️!!",
                     ]}
-                    tags={["Super Fudgy 🍫", "Kids love it!", "Addicting 😍"]}
+                    tags={[
+                    "Sweet & Soft 🍬",
+                    "Lami kaayo sa buntag!",        
+                    "Baked with love ❤️",
+                    "Kids will love it 😋",
+                    "Perfect dessert",
+                    "Gusto kaayo sa tanan",        
+                    "Chewy & Yummy",
+                    "Indulgence time 🍰"
+                    ]}
                     rightComponent={
                         <ReviewCard 
                         image= {img3}
                         rating={4.5} 
                         count={31} 
-                        borderDesign={'border-2 border-[#FF8315]'}
+                        borderDesign={''}
                         />
                     }
                 />
@@ -226,13 +255,22 @@ function Products() {
         <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.5}>
             <div className="h-[100vh] w-full flex flex-col items-center justify-center">
                 <ProductCard
-                    title="Slide Chocolate Cake"
+                    title="Sliced Chocolate Cake"
                     price="180.00"
                     description={[
-                        "Rich, fudgy, and loaded with chunks of premium dark chocolate.",
-                        "Perfect for chocolate lovers who want an indulgent treat!",
+                        "Decadent and moist chocolate layers with a smooth, velvety frosting. ",
+                        "Ideal for satisfying your chocolate cravings!",
                     ]}
-                    tags={["Super Fudgy 🍫", "Kids love it!", "Addicting 😍"]}
+                    tags={[
+                        "Rich & Creamy 😋",
+                        "Kalami kaayo! 🍰",           
+                        "Perfect for sharing",
+                        "Pwede kaayo pang snacks",   
+                        "Chocolate lover ❤️",
+                        "Lingaw kaayo kaonon! 😄",    
+                        "Family approved",
+                        "Masarap gyud sa tanang edad" 
+                    ]}
                     rightComponent={
                         <ReviewCard 
                         image= {img4}

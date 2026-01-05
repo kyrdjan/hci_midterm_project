@@ -72,7 +72,7 @@ function MessageDialog({ isOpen, onClose }) {
         />
         <button
           onClick={handleSend}
-          className="bg-[#FF8315] text-white px-4 py-2 rounded-xl hover:bg-[#e64f61] transition-colors"
+          className="bg-[#FF8315] text-white px-4 py-2 rounded-xl hover:bg-[#FFAE67] hover:border transition-colors"
         >
           Send
         </button>
