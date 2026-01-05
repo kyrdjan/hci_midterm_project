@@ -1,27 +1,47 @@
+import { useNavigate } from "react-router-dom";
+
 import Button from "./button";
+import CartItem from "./CartItem";
+
+import img1 from "../assets/bananacake.svg";
+import img2 from "../assets/revelbars.jpg";
+
 
 function CartDialog({ isOpen, onClose }) {
-    return (
-        <div
-        className={`cart-drawer ${isOpen ? "open" : ""}`}
-        >
-        <div className="cart-header">
-            <h3>Your Cart</h3>
-            <button onClick={onClose} className="cart-close-btn">✖</button>
+
+  const navigate = useNavigate();
+
+  return (
+    <div className={`cart-drawer ${isOpen ? "open" : ""}`}>
+
+      <div className="cart-header p-3">
+        <h3>Your Cart</h3>
+        <button onClick={onClose} className="cart-close-btn">✖</button>
+      </div>
+
+      <div className="cart-body gap-10 flex flex-col overflow-y-auto px-3 pt-5">
+
+        {/* Reusable cart item */}
+        <CartItem image={img1} name="Banana Loaf" price={180} />
+
+        {/*divider*/}
+        <div className="w-full">
+          <hr className="border-t-2 border-black rounded-lg w-full my-1" />
         </div>
 
-        {/* Example placeholder */}
-        <div className="cart-body">
-            <div className="flex justify-center items-center h-32">
-            <p className="text-gray-500">Your cart is empty.</p>
-            </div>
-        </div>
+        {/* Reusable cart item */}
+        <CartItem image={img2} name="Revel Bars" price={180} />
+        
+      </div>
 
-        <div className="flex justify-end">
-            <Button variant="solid" className="mb-2">Checkout</Button>
-        </div>
-        </div>
-    );
+      <div className="flex justify-end">
+        <Button variant="solid" className="mb-2" onClick={() => { onClose(); navigate("/checkout"); }}>
+          Checkout
+        </Button>
+      </div>
+
+    </div>
+  );
 }
 
 export default CartDialog;

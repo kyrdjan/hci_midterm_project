@@ -6,12 +6,8 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import Customize from "./pages/Customize";
-import Cart from "./pages/Cart";
+import CheckoutPage from "./pages/CheckoutPage";
 import Footer from "./components/Footer";
-import { useEffect } from "react";
-import axios from "axios";
-
-
 function App() {
   const location = useLocation();
 
@@ -24,7 +20,7 @@ function App() {
           key={location.pathname}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
           className="flex-1"
         >
           <Routes>
@@ -32,7 +28,7 @@ function App() {
             <Route path="/Products" element={<Products />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Customize" element={<Customize />} />
-            <Route path="/Cart" element={<Cart />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
           </Routes>
         </motion.div>
       </AnimatePresence>
