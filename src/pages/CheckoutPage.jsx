@@ -22,8 +22,8 @@ function CheckoutPage() {
 
       {/* Main container */}
       <div className="w-full max-w-lg bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
-        <div className="w-full h-auto flex flex-row items-center justify-between px-6 pt-3">
-          <div className="w-full  md:w-auto flex justify-center md:justify-start">
+        <div className="w-full h-auto flex flex-row items-center justify-between px-6 pt-6">
+          <div className="w-full  md:w-auto flex justify-start md:justify-start">
               <img 
                   src={logo} 
                   alt="Logo" 

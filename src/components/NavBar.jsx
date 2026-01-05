@@ -29,7 +29,7 @@ function Navbar() {
     const activeButton = pathnameToButton[location.pathname] || "home";
 
     return (
-        <div className="fixed top-0 left-0 w-full z-50 flex flex-wrap h-auto md:h-[20vh] justify-between items-center md:px-[2vw] py-4 bg-blur-xs">
+        <div className="fixed top-0 left-0 w-full z-50 flex flex-wrap h-auto md:h-[18vh] justify-between items-center md:px-[2vw] py-4 backdrop-blur-xs">
     
             {/* Logo */}
             <div className="w-full pl-5 md:w-auto flex justify-center md:justify-start pt-[10px]">
