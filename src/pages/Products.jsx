@@ -226,7 +226,7 @@ function Products() {
         <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.5}>
             <div className="h-[100vh] w-full flex flex-col items-center justify-center">
                 <ProductCard
-                    title="Chocolate Brownies 4"
+                    title="Slide Chocolate Cake"
                     price="180.00"
                     description={[
                         "Rich, fudgy, and loaded with chunks of premium dark chocolate.",
