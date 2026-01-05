@@ -21,8 +21,8 @@ function Products() {
     return (
     <div className="h-auto w-full flex flex-col items-center justify-center">
 
-        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.5}>
-            <div className = "flex flex-col items-center justify-center w-full h-[100vh] pt-20">
+        <FadeInSection className="flex flex-col items-center justify-center w-full h-screen" value={0.5}>
+            <div className = "flex flex-col items-center justify-center w-full h-screen pt-20">
                 <div className="flex flex-row items-center justify-center w-full px-30">
                     <hr className="flex-1 border-t-3 border-black rounded-lg my-3 mr-3" />
                     <h1 className="text-6xl font-bold text-[#E74A4A] text-shadow-[-2px_2px_0px_#F7C4C4]">
@@ -37,7 +37,7 @@ function Products() {
                         rating={4.5} 
                         count={42} 
                         />
-                        <div className='flex flex-row w-full alignment-center justify-center pt-[20px]'>
+                        <div className='flex flex-row w-full alignment-center justify-center pt-5'>
                             <div id='bot'> Chocolate Banana Loaf </div> 
                             <div className='px-4'> - </div>
                             <div id='addtocartfont' className='text-lg'> ₱ 160</div>

@@ -7,6 +7,7 @@ import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import Customize from "./pages/Customize";
 import Cart from "./pages/Cart";
+import Footer from "./components/Footer";
 import { useEffect } from "react";
 import axios from "axios";
 
@@ -14,16 +15,6 @@ import axios from "axios";
 function App() {
   const location = useLocation();
 
-  
-  // useEffect(() => {
-  //   axios.get("/api/hello")
-  //     .then(response => {
-  //       console.log("Response from backend:",response.data);
-  //     })
-  //     .catch(error => {
-  //       console.error("Error connecting to backend:", error);
-  //     });
-  // }, []);
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#FFE3E5]">
       <Navbar />
@@ -45,6 +36,7 @@ function App() {
           </Routes>
         </motion.div>
       </AnimatePresence>
+      <Footer />
     </div>
   );
 }

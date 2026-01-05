@@ -19,7 +19,7 @@ function Navbar() {
                 <img 
                     src={logo} 
                     alt="Logo" 
-                    className="max-w-[120px] md:max-w-[180px] lg:max-w-[250px] object-contain" 
+                    className="max-w-30 md:max-w-45 lg:max-w-62.5 object-contain" 
                 />
             </div>
 
