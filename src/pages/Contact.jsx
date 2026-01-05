@@ -2,7 +2,7 @@ import { FaPhone, FaFacebook, FaMapMarkerAlt } from "react-icons/fa";
 
 function Contact() {
     return (
-        <div className="flex flex-col items-center justify-around w-full h-full px-4 sm:px-10">
+        <div className="flex flex-col items-center justify-around w-full h-full px-4 sm:px-10 mt-30 mb-50">
             
             <div className="flex flex-col items-center justify-start w-full h-auto mt-10">
             
