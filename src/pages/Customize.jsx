@@ -116,7 +116,7 @@ function Customize() {
 
   return (
     <div>
-      <div className="flex flex-col items-center justify-start w-full pt-30">
+      <div className="flex flex-col items-center justify-start w-full pt-40">
         <h1 className="text-5xl font-bold text-[#E74A4A] text-shadow-[-2px_2px_0px_#F7C4C4]">
           Customize Your Product!
         </h1>
