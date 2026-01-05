@@ -24,7 +24,7 @@ function Navbar() {
             </div>
 
             {/* Navigation Links */}
-            <div className="flex flex-wrap gap-4 pr-5 md:gap-[5vw] w-full md:w-auto justify-center md:justify-end mt-4 md:mt-0">
+            <div className={`flex flex-wrap gap-4 pr-5 md:gap-[5vw] w-full md:w-auto justify-center md:justify-start mt-4 md:mt-0 ${activeButton === "products" ? "-mr-[15px]" : ""}`}>
                 <Link to="/">
                     <Button 
                         variant={activeButton === "home" ? "red_nav" : "ghost"} 
@@ -61,18 +61,29 @@ function Navbar() {
                 {/* Icons */}
                 <div className="flex gap-3">
                     <button
-                        onClick={() => setMessageOpen(!isMessageOpen)} 
-                        className="p-1 hover:scale-110 transition-transform duration-300 ease-in-out"
+                    onClick={() => {
+                        setMessageOpen((prev) => {
+                        if (!prev) setCartOpen(false); // close cart if opening message
+                        return !prev;
+                        });
+                    }}
+                    className="p-1 hover:scale-110 transition-transform duration-300 ease-in-out"
                     >
-                        <MessageCircle className="w-6 h-6 text-[#490101]" />
+                    <MessageCircle className="w-6 h-6 text-[#490101]" />
                     </button>
 
                     <button
-                        onClick={() => setCartOpen(!isCartOpen)}
-                        className="p-1 hover:scale-110 transition-transform duration-300 ease-in-out"
+                    onClick={() => {
+                        setCartOpen((prev) => {
+                        if (!prev) setMessageOpen(false); // close message if opening cart
+                        return !prev;
+                        });
+                    }}
+                    className="p-1 hover:scale-110 transition-transform duration-300 ease-in-out"
                     >
-                        <ShoppingCart className="w-6 h-6 text-[#490101]" />
+                    <ShoppingCart className="w-6 h-6 text-[#490101]" />
                     </button>
+
                 </div>
             </div>
 

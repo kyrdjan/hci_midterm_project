@@ -17,7 +17,7 @@ function Products() {
     return (
     <div className="h-auto w-full flex flex-col items-center justify-center">
 
-        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.6}>
+        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.5}>
             <div className = "flex flex-col items-center justify-center w-full h-[100vh] pt-20">
                 <div className="flex flex-row items-center justify-center w-full px-30">
                     <hr className="flex-1 border-t-3 border-black rounded-lg my-3 mr-3" />
@@ -33,7 +33,7 @@ function Products() {
                         rating={4.5} 
                         count={42} 
                         />
-                        <div className='flex flex-row w-full alignment-center justify-center'>
+                        <div className='flex flex-row w-full alignment-center justify-center pt-[20px]'>
                             <div id='bot'> Chocolate Banana Loaf </div> 
                             <div className='px-4'> - </div>
                             <div id='addtocartfont' className='text-lg'> ₱ 160</div>
@@ -46,7 +46,7 @@ function Products() {
                         rating={4.5} 
                         count={52} 
                         />
-                        <div className='flex flex-row w-full alignment-center justify-center'>
+                        <div className='flex flex-row w-full alignment-center justify-center pt-[20px]'>
                             <div id='bot'> Cassava Cake </div> 
                             <div className='px-4'> - </div>
                             <div id='addtocartfont' className='text-lg'> ₱ 175</div>
@@ -59,7 +59,7 @@ function Products() {
                         rating={4} 
                         count={32} 
                         />
-                        <div className='flex flex-row w-full alignment-center justify-center'>
+                        <div className='flex flex-row w-full alignment-center justify-center pt-[20px]'>
                             <div id='bot'> Moist Cake in a Tub </div> 
                             <div className='px-4'> - </div>
                             <div id='addtocartfont' className='text-lg'> ₱ 185</div>
@@ -69,7 +69,7 @@ function Products() {
             </div>
         </FadeInSection>
 
-        <FadeInSection className="flex flex-col items-center justify-center w-full h-auto" value={0.6}>
+        <FadeInSection className="flex flex-col items-center justify-center w-full h-auto" value={0.5}>
             <div className="flex flex-col items-center justify-center w-full h-auto z-20">
                 
                 <div id='special' className="flex flex-row items-center justify-center w-full h-full">
@@ -151,7 +151,7 @@ function Products() {
             
         </FadeInSection>
 
-        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.6}>
+        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.5}>
             <div className="h-[100vh] w-full flex flex-col items-center justify-center">
                 <ProductCard
                     title="Chocolate Brownies 1"
@@ -173,7 +173,7 @@ function Products() {
             </div>
         </FadeInSection>
 
-        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh] " value={0.6}>
+        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh] " value={0.5}>
             <div className="h-[100vh] w-full flex flex-col items-center justify-center">
                 <ProductCard
                     title="Chocolate Brownies 2"
@@ -195,7 +195,7 @@ function Products() {
             </div>
         </FadeInSection>
 
-        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.6}>
+        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.5}>
             <div className="h-[100vh] w-full flex flex-col items-center justify-center">
                 <ProductCard
                     title="Chocolate Brownies 3"
@@ -217,7 +217,7 @@ function Products() {
             </div>
         </FadeInSection>
 
-        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.6}>
+        <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.5}>
             <div className="h-[100vh] w-full flex flex-col items-center justify-center">
                 <ProductCard
                     title="Chocolate Brownies 4"
