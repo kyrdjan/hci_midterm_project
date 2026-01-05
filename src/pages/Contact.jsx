@@ -3,37 +3,20 @@ import { FaPhone, FaFacebook, FaMapMarkerAlt } from "react-icons/fa";
 
 function Contact() {
     return (
-        <div className = "flex flex-col items-center justify-around w-full h-[100vh] px-10 pt-15 ">
+        <div className = "flex flex-col items-center justify-around w-full h-full px-10">
             
-            <div className="flex flex-col items-center justify-left w-full h-auto pt-20">
-                
-                <div className="flex flex-row items-center justify-center w-full">
-                    <div className="w-[40%]">
-                        <hr className="flex-1 border-t-3 border-black rounded-lg my-3 mr-3" />
-                    </div>
-                    <h1 className="text-5xl font-bold text-[#E74A4A] text-shadow-[-2px_2px_0px_#F7C4C4]">
+            <div className="flex flex-col items-center justify-left w-full h-auto mt-10">
+            
+                <div className="flex flex-row items-center justify-center w-full px-30 pt-20">
+                    <hr className="flex-1 border-t-3 border-black rounded-lg my-3 mr-3" />
+                    <h1 className="text-6xl font-bold text-[#E74A4A] text-shadow-[-2px_2px_0px_#F7C4C4]">
                         Contact Us!
                     </h1>
-                    <hr className="flex-1 border-t-3 border-black rounded-lg my-3 mr-3 w-full" />
-
+                    <hr className="flex-1 border-t-3 border-black rounded-lg my-3 ml-3" />
                 </div>
 
-                                {/* Map with pinpoint */}
-                <div className="w-[100%] h-96 bg-white shadow-[-10px_10px_0px_#F7C4C4] overflow-hidden flex flex-col alignment-center justify-center mt-10">
-                    <div className="w-full h-86 px-5 overflow-hidden">
-                        <iframe
-                        title="Antongalon Pinpoint"
-                        src="https://www.google.com/maps?q=8.951944,125.625389&hl=en&z=15&output=embed"
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        ></iframe>
-                    </div>
-                </div>
 
-                <div className="flex flex-row items-center justify-center gap-20 text-[#490101] w-full h-30"> 
+                <div className="flex flex-row items-center justify-center gap-20 text-[#490101] w-full h-15"> 
                     
                     {/* Location */}
                     <div className="flex items-center gap-3">
@@ -71,6 +54,20 @@ function Contact() {
 
                 </div>
 
+                {/* Map with pinpoint */}
+                <div className="w-[100%] h-96 bg-white shadow-[-10px_10px_0px_#F7C4C4] overflow-hidden flex flex-col alignment-center justify-center mt-10">
+                    <div className="w-full h-86 px-5 overflow-hidden">
+                        <iframe
+                        title="Antongalon Pinpoint"
+                        src="https://www.google.com/maps?q=8.951944,125.625389&hl=en&z=15&output=embed"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen=""
+                        loading="lazy"
+                        ></iframe>
+                    </div>
+                </div>
 
             </div>
 

@@ -10,6 +10,10 @@ import right_pic from '../assets/chococake.svg';
 import creamcheese from '../assets/creamcheese.svg';
 
 
+import img1 from '../assets/brownies.jpg';
+import img2 from '../assets/revelbars.jpg';
+import img3 from '../assets/yematart.jpg';
+import img4 from '../assets/slicedchocolatecake.jpg';
 
 var tags = ["Very Tasty! 😊", "Kalami!","Garlic my Fav! ", "Huyy dako siya sa personal!", "<3",  "More please!", "Pa 22ya"]
 
@@ -151,10 +155,12 @@ function Products() {
             
         </FadeInSection>
 
+
+        {/* Product Listings */}
         <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.5}>
             <div className="h-[100vh] w-full flex flex-col items-center justify-center">
                 <ProductCard
-                    title="Chocolate Brownies 1"
+                    title="Chocolate Brownies"
                     price="180.00"
                     description={[
                         "Rich, fudgy, and loaded with chunks of premium dark chocolate.",
@@ -163,7 +169,7 @@ function Products() {
                     tags={["Super Fudgy 🍫", "Kids love it!", "Addicting 😍"]}
                     rightComponent={
                         <ReviewCard 
-                        image= {left_pic}
+                        image= {img1}
                         rating={4.5} 
                         count={42}
                         borderDesign={'border-2 border-[#FF8315]'}
@@ -176,7 +182,7 @@ function Products() {
         <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh] " value={0.5}>
             <div className="h-[100vh] w-full flex flex-col items-center justify-center">
                 <ProductCard
-                    title="Chocolate Brownies 2"
+                    title="Revel Bars"
                     price="180.00"
                     description={[
                         "Rich, fudgy, and loaded with chunks of premium dark chocolate.",
@@ -185,9 +191,9 @@ function Products() {
                     tags={["Super Fudgy 🍫", "Kids love it!", "Addicting 😍"]}
                     rightComponent={
                         <ReviewCard 
-                        image= {left_pic}
+                        image= {img2}
                         rating={4.5} 
-                        count={42} 
+                        count={27} 
                         borderDesign={'border-2 border-[#FF8315]'}
                         />
                     }
@@ -198,7 +204,7 @@ function Products() {
         <FadeInSection className="flex flex-col items-center justify-center w-full h-[100vh]" value={0.5}>
             <div className="h-[100vh] w-full flex flex-col items-center justify-center">
                 <ProductCard
-                    title="Chocolate Brownies 3"
+                    title="Yema Tart"
                     price="180.00"
                     description={[
                         "Rich, fudgy, and loaded with chunks of premium dark chocolate.",
@@ -207,9 +213,9 @@ function Products() {
                     tags={["Super Fudgy 🍫", "Kids love it!", "Addicting 😍"]}
                     rightComponent={
                         <ReviewCard 
-                        image= {left_pic}
+                        image= {img3}
                         rating={4.5} 
-                        count={42} 
+                        count={31} 
                         borderDesign={'border-2 border-[#FF8315]'}
                         />
                     }
@@ -229,9 +235,9 @@ function Products() {
                     tags={["Super Fudgy 🍫", "Kids love it!", "Addicting 😍"]}
                     rightComponent={
                         <ReviewCard 
-                        image= {left_pic}
+                        image= {img4}
                         rating={4.5} 
-                        count={42} 
+                        count={38} 
                         borderDesign={'border-2 border-[#FF8315]'}
                         />
                     }
