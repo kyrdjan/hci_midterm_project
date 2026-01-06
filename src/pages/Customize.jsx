@@ -5,6 +5,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button'; 
+import CustomButton from '../components/button'
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
 
@@ -116,21 +117,25 @@ function Customize() {
 
   return (
     <div>
-      <div className="flex flex-col items-center justify-start w-full pt-50">
-        <h1 className="text-5xl font-bold text-[#E74A4A] text-shadow-[-2px_2px_0px_#F7C4C4]">
+      <div className="flex flex-row items-center justify-center w-full pt-30 px-4 sm:px-30 ">
+        <hr className="flex-1 border-t-3 border-black rounded-lg my-3 mr-3 w-full" />
+        <h1 className="text-6xl font-bold text-[#E74A4A] text-shadow-[-2px_2px_0px_#F7C4C4]">
           Customize Your Product!
         </h1>
+        <hr className="flex-1 border-t-3 border-black rounded-lg my-3 sm:ml-3 w-full" />
       </div>
-      <div className="flex flex-col items-start justify-center w-full pt-10 gap-10 px-10">
+      <div className="flex flex-col items-start justify-center w-full pt-10 px-10">
         {/* details section */}
         <div className="flex flex-col items-center justify-center w-full">
-          <h1 className="text-4xl font-bold text-[#490101]">Cake form</h1>
-          <div className="flex justify-center w-full">
+          {/* <h1 className="text-4xl font-bold text-[#490101]">Cake form</h1> */}
+          <div className="flex justify-center items-center w-full ">
             {/* form inputs */}
             <form className="flex flex-col gap-5 pt-5 max-w-3xl w-full px-4" onSubmit={handleSubmit}>
-              <div className="flex flex-col">
-                <h2 className="text-2xl font-bold text-[#490101]">Cake Layer</h2>
-                <FormGroup row sx={{ gap: 2, flexWrap: "wrap" }}>
+              <div className="flex flex-col w-full items-center">
+                <div className="w-full flex flex-row justify-center">
+                  <h2 className="text-2xl font-bold text-[#490101]">Cake Layer</h2>
+                </div>
+                <FormGroup row sx={{ gap: 2, flexWrap: "wrap" }} className="flex justify-center">
                   <FormControlLabel 
                     control={
                       <Checkbox 
@@ -171,9 +176,9 @@ function Customize() {
               </div>
 
               {/* Cake Flavor */}
-              <div className="flex flex-col">
+              <div className="flex flex-col justify-center items-center pt-5">
                 <h2 className="text-2xl font-bold text-[#490101]">Cake Flavor</h2>
-                <FormGroup row sx={{ gap: 2, flexWrap: "wrap" }}>
+                <FormGroup row sx={{ gap: 2, flexWrap: "wrap" }} className="flex justify-center">
                   <FormControlLabel 
                     control={
                       <Checkbox 
@@ -244,9 +249,9 @@ function Customize() {
               </div>
 
               {/* Filling Flavor */}
-              <div className="flex flex-col">
+              <div className="flex flex-col justify-center items-center pt-5">
                 <h2 className="text-2xl font-bold text-[#490101]">Filling Flavor</h2>
-                <FormGroup row sx={{gap: 2, flexWrap:"wrap"}}>
+                <FormGroup row sx={{gap: 2, flexWrap:"wrap"}} className="flex flex-col justify-center items-center">
                   <FormControlLabel 
                     control={
                       <Checkbox 
@@ -325,9 +330,9 @@ function Customize() {
               </div>
 
               {/* Icing Flavor */}
-              <div className="flex flex-col">
+              <div className="flex flex-col justify-center items-center pt-5">
                 <h2 className="text-2xl font-bold text-[#490101]">Icing Flavor</h2>
-                <FormGroup row sx={{gap: 2, flexWrap:"wrap"}}>
+                <FormGroup row sx={{gap: 2, flexWrap:"wrap"}} className="flex flex-col justify-center items-center">
                   <FormControlLabel 
                     control={
                       <Checkbox 
@@ -405,35 +410,37 @@ function Customize() {
                   </div>
                 </FormGroup>
               </div>
+              
+              <div className="flex flex-row gap-10 w-full justify-center items-center pt-5">
+                {/* Size */}
+                <div className="flex flex-col">
+                  <h2 className="text-2xl font-bold text-[#490101]">Size</h2>
+                  <TextField 
+                    size="medium" 
+                    placeholder="Cake size in inches" 
+                    variant="outlined" 
+                    value={cakeOptions.size}
+                    onChange={(e) => setCakeOptions(prev => ({ ...prev, size: e.target.value }))}
+                    sx={{ width: '200px' }}
+                    />
+                </div>
 
-              {/* Size */}
-              <div className="flex flex-col">
-                <h2 className="text-2xl font-bold text-[#490101]">Size</h2>
-                <TextField 
-                  size="medium" 
-                  placeholder="Cake size in inches" 
-                  variant="outlined" 
-                  value={cakeOptions.size}
-                  onChange={(e) => setCakeOptions(prev => ({ ...prev, size: e.target.value }))}
-                  sx={{ width: '200px' }}
-                />
-              </div>
-
-              {/* Message on Cake */}
-              <div className="flex flex-col">
-                <h2 className="text-2xl font-bold text-[#490101]">Message on Cake</h2>
-                <TextField 
-                  size="medium"
-                  placeholder="Message on top of cake"
-                  variant="outlined"
-                  value={cakeOptions.message_on_cake}
-                  onChange={(e) => setCakeOptions(prev => ({ ...prev, message_on_cake: e.target.value }))}
-                  sx={{ width: '200px' }}
-                />
+                {/* Message on Cake */}
+                <div className="flex flex-col">
+                  <h2 className="text-2xl font-bold text-[#490101]">Message on Cake</h2>
+                  <TextField 
+                    size="medium"
+                    placeholder="Message on top of cake"
+                    variant="outlined"
+                    value={cakeOptions.message_on_cake}
+                    onChange={(e) => setCakeOptions(prev => ({ ...prev, message_on_cake: e.target.value }))}
+                    sx={{ width: '200px' }}
+                    />
+                </div>
               </div>
 
               {/* Detailed Instructions */}
-              <div className="flex flex-col">
+              <div className="flex flex-col justify-center items-center pt-5">
                 <h2 className="text-2xl font-bold text-[#490101]">Detailed Instructions</h2>
                 <TextField 
                   size="medium"
@@ -443,12 +450,12 @@ function Customize() {
                   rows={4}
                   value={cakeOptions.detailed_instructions}
                   onChange={(e) => setCakeOptions(prev => ({ ...prev, detailed_instructions: e.target.value }))}
-                  sx={{ width: '400px' }}
+                  sx={{ width: '450px' }}
                 /> 
               </div>
 
               {/* Image Reference */}
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col justify-center items-center gap-5 pt-5">
                 <h2 className="text-2xl font-bold text-[#490101]">Image Reference</h2>
 
                 <input 
@@ -476,7 +483,7 @@ function Customize() {
                 </label>
 
                 {imagePreview && (
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col justify-center items-center gap-5">
                     <img 
                       src={imagePreview} 
                       alt="Cake reference" 
@@ -496,22 +503,12 @@ function Customize() {
 
               {/* Submit Button */}
               <div className="flex justify-center mt-8 mb-8">
-                <Button
+                <CustomButton
                   type="submit"
-                  variant="contained"
-                  size="large"
-                  sx={{
-                    backgroundColor: '#490101',
-                    '&:hover': {
-                      backgroundColor: '#6B0202',
-                    },
-                    paddingX: 6,
-                    paddingY: 1.5,
-                    fontSize: '1.1rem',
-                  }}
+                  variant="red"
                 >
                   Save Customization
-                </Button>
+                </CustomButton>
               </div>
             </form>
           </div>
@@ -520,7 +517,8 @@ function Customize() {
 
       {/* Notification */}
       {showNotification && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
+       <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
+
           <div className="bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
@@ -531,8 +529,25 @@ function Customize() {
       )}
 
       {/* customize cakes here */}
-      <div className="flex flex-col items-center justify-center w-full pt-10 mb-40 px-10">
-        <h1 className="text-4xl font-bold text-[#490101] mb-8">Our customize cake</h1>
+      <div className="flex flex-col items-center justify-center w-full pt-20 pb-10 px-20">
+        <div className="w-full mb-10 flex justify-start items-center max-w-7xl">
+          <div className=" z-10 transform flex flex-row items-start justify-start w-full">
+            <div className="w-1/4">
+              <hr className="flex-1 border-t-3 border-black rounded-lg mt-9" />
+            </div>
+            <div className="flex flex-row items-start justify-start whitespace-nowrap">
+              <h1 className="text-5xl font-bold pr-3 pl-3 ">
+                <span> Few of our </span>
+              </h1>
+              <h1 className="text-5xl font-bold text-[#E74A4A] pr-3">
+                  Customized Cakes
+              </h1>
+            </div>
+            <div className="w-full">
+              <hr className="flex-1 border-t-3 border-black rounded-lg mt-9" />
+            </div>
+          </div>
+        </div>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 w-full max-w-7xl">
           <div className="aspect-square overflow-hidden rounded-lg border-2 border-[#490101]">

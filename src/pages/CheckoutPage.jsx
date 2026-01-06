@@ -1,8 +1,21 @@
 import Button from "../components/button";
 import logo from "../assets/logo.svg";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function CheckoutPage() {
+  //Notif
+  const [showNotif, setShowNotif] = useState(false);
+
+  const handleProceed = () => {
+    setShowNotif(true);
+
+    // navigate after 2.5 seconds
+    setTimeout(() => {
+      navigate("/");
+    }, 2500);
+  };
+
   // Cart items
   const cartItems = [
     { name: "Banana Loaf", quantity: 1, price: 180},
@@ -18,7 +31,17 @@ function CheckoutPage() {
 
   return (
     <div className="min-h-screen bg-[#FFE3E5]  flex flex-col items-center justify-center p-4 sm:p-10 bg-[#FFE3E5]">
+      {showNotif && (
+       <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
 
+          <div className="bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg flex items-center gap-3">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span className="font-semibold">Sagot ko na ang bayad!</span>
+          </div>
+        </div>
+      )}
 
       {/* Main container */}
       <div className="w-full max-w-lg bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
@@ -82,7 +105,7 @@ function CheckoutPage() {
           </div>
 
           <div className="flex justify-end">
-            <Button variant="solid" className="w-1/2 py-3 text-white text-xl transition-colors transition-transform duration-200 ease-in-out" onClick={() => navigate("/")}> {/* / means /home */}
+            <Button variant="solid" className="w-1/2 py-3 text-white text-xl transition-colors transition-transform duration-200 ease-in-out" onClick={handleProceed}> 
               Proceed to Payment
             </Button>
           </div>

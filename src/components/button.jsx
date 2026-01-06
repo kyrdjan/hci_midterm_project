@@ -1,4 +1,4 @@
-export default function Button({ children, onClick, variant = "ghost", className = "" }) {
+export default function CustomButton({ children, onClick, variant = "ghost", className = "" }) {
 
   const variants = {
     ghost: "text-lg bg-transparent text-[#490101] hover:text-white active:text-[#E74A4A] select-none",

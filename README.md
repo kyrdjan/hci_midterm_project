@@ -23,3 +23,4 @@ npm install -D tailwindcss postcss autoprefixer
 npm install @heroicons/react
 npm install react-icons
 pip install axios
+npm install @mui/material @mui/icons-material @emotion/react @emotion/styled

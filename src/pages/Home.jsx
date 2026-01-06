@@ -1,5 +1,5 @@
 import MainPicture from '../assets/main_pic.svg'
-import Button from '../components/button'
+import CustomButton from '../components/button'
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -61,21 +61,21 @@ function Home() {
         </div>
 
         <div className="flex items-center justify-start pt-4 md:pt-10 flex-wrap gap-4">
-          <Button
+          <CustomButton
             variant="red"
             className="mt-[2vh]"
             onClick={() => navigate("/customize")}
           >
             ORDER NOW!
-          </Button>
+          </CustomButton>
 
-          <Button
+          <CustomButton
             variant="outline"
             className="mt-[2vh]"
             onClick={() => navigate("/products")}
           >
             EXPLORE MORE
-          </Button>
+          </CustomButton>
         </div>
       </div>
 
