@@ -24,3 +24,4 @@ npm install @heroicons/react
 npm install react-icons
 pip install axios
 npm install @mui/material @mui/icons-material @emotion/react @emotion/styled
+pnpm add react@19.2.3 react-dom@19.2.3
