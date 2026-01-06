@@ -8,6 +8,13 @@ import Button from '@mui/material/Button';
 import CustomButton from '../components/button'
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
+import cake1 from '../assets/cake_1.webp'
+import cake2 from '../assets/cake_2.webp'
+import cake3 from '../assets/cake_3.webp'
+import cake4 from '../assets/cake_4.webp'
+import cake5 from '../assets/cake_5.webp'
+import cake6 from '../assets/cake_6.webp'
+
 
 function Customize() {
 
@@ -552,42 +559,42 @@ function Customize() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 w-full max-w-7xl">
           <div className="aspect-square overflow-hidden rounded-lg border-2 border-[#490101]">
             <img 
-              src="src\assets\cake_1.webp" 
+              src={cake1}
               alt="Cake 1" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 cursor-pointer"
             />
           </div>
           <div className="aspect-square overflow-hidden rounded-lg border-2 border-[#490101]">
             <img 
-              src="src\assets\cake_2.webp" 
+              src={cake2}
               alt="Cake 2" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 cursor-pointer"
             />
           </div>
           <div className="aspect-square overflow-hidden rounded-lg border-2 border-[#490101]">
             <img 
-              src="src\assets\cake_3.webp" 
+              src={cake3}
               alt="Cake 3" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 cursor-pointer"
             />
           </div>
           <div className="aspect-square overflow-hidden rounded-lg border-2 border-[#490101]">
             <img 
-              src="src\assets\cake_4.webp" 
+              src={cake4}
               alt="Cake 4" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 cursor-pointer"
             />
           </div>
           <div className="aspect-square overflow-hidden rounded-lg border-2 border-[#490101]">
             <img 
-              src="src\assets\cake_5.webp" 
+              src={cake5}
               alt="Cake 5" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 cursor-pointer"
             />
           </div>
           <div className="aspect-square overflow-hidden rounded-lg border-2 border-[#490101]">
             <img 
-              src="src\assets\cake_6.webp" 
+              src={cake6}
               alt="Cake 6" 
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 cursor-pointer"
             />
